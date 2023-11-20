@@ -1,0 +1,101 @@
+{
+  "experiences": [
+    {
+      "id": 0,
+      "jobTitle": "Office Administrator",
+      "startDate": "July 2021",
+      "endDate": "january 2022",
+      "company": "BannerJee Global",
+      "description": [
+        "Assisting students with all IELTS modules by highlighting their strong areas, flaws and areas of improvement.",
+        "Conducting sessions for One-to-one discussions with students about their assignments. ",
+        "Supervising and checking tests for language proficiency. ",
+        "Various official duties as in conducting classes, preparation of study material and setting up online classes.",
+        "Taking initiatives and suggesting potential solutions for managing various tasks.",
+        " Sharing insights and best practices within the team to foster a continuous learning environment."
+      ]
+    },
+    {
+      "id": 1,
+      "jobTitle": "Junior Programmer",
+      "startDate": "Jan 2023",
+      "endDate": "April 2023",
+      "company": "Jusitice Technology Services (SOLGEN)",
+      "description": [
+        "Provided company users with tech support for IT problems",
+        "Maintained knowledge of advances in information technology systems and applications.",
+        "Tracked and prioritized IT tickets and requests based on severity and potential business disruptions involved.",
+        "Assisted customers with various types of technical issues via email, live chat and telephone.",
+        "Promoted high customer satisfaction by resolving problems with knowledgeable  and friendly service",
+        "Asset Management and Asset Tracking"
+      ]
+    },
+    {
+      "id": 2,
+      "jobTitle": "Laptop and Classroom support Technologist",
+      "startDate": "August 2023",
+      "endDate": "Current",
+      "company": "Sheridan College",
+      "description": [
+        "Provided exceptional customer service, assisting clients courteously and efficiently.",
+        "Exhibited String verbal and written communication skills with a high level of professionalism.",
+        "Effectively conveyed technical information to individuals with diverse backgrounds.",
+        "Demonstrated proficient knowledge of Windows 10 & 11 And MS Office 365.",
+        "Showcased expertise in Audio-Visualequipment, including projectors and microphones.",
+        "Scquired knowledge of current Android and IOS devices, providing comprehensive technical support."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "UI/UX realtor Application",
+      "description": "This is the details of the project 1.Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis laudantium aperiam perspiciatis tempora deleniti unde velit reprehenderit dolorem a. Recusandae explicabo temporibus unde dolores dolore? Eius dolorum nesciunt saepe unde sunt iste expedita, cupiditate esse corporis placeat similique ex, at et mollitia dolorem. Laborum qui voluptate harum dicta labore perferendis!",
+      "technologyUsed": "programming languages",
+      "others": "This is the remaining details."
+    },
+    {
+      "id": 2,
+      "name": "Sheridan Bagle Cart",
+      "description": "This is the details of the project 2.Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis laudantium aperiam perspiciatis tempora deleniti unde velit reprehenderit dolorem a. Recusandae explicabo temporibus unde dolores dolore? Eius dolorum nesciunt saepe unde sunt iste expedita, cupiditate esse corporis placeat similique ex, at et mollitia dolorem. Laborum qui voluptate harum dicta labore perferendis!",
+      "technologyUsed": "programming languages",
+      "others": "This is the remaining details."
+    },
+    {
+      "id": 3,
+      "name": "Weather Application",
+      "description": "This is the details of the project 3.Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis laudantium aperiam perspiciatis tempora deleniti unde velit reprehenderit dolorem a. Recusandae explicabo temporibus unde dolores dolore? Eius dolorum nesciunt saepe unde sunt iste expedita, cupiditate esse corporis placeat similique ex, at et mollitia dolorem. Laborum qui voluptate harum dicta labore perferendis!",
+      "technologyUsed": "programming languages",
+      "others": "This is the remaining details."
+    },
+    {
+      "id": 4,
+      "name": "Takeaway Card Game",
+      "description": "This is the details of the project 4.Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis laudantium aperiam perspiciatis tempora deleniti unde velit reprehenderit dolorem a. Recusandae explicabo temporibus unde dolores dolore? Eius dolorum nesciunt saepe unde sunt iste expedita, cupiditate esse corporis placeat similique ex, at et mollitia dolorem. Laborum qui voluptate harum dicta labore perferendis!",
+      "technologyUsed": "programming languages",
+      "others": "This is the remaining details."
+    }
+  ],
+  "education": [
+    {
+      "id": 0,
+      "type": "Seconday Education",
+      "name": "Parth Public Senior Secondary School",
+      "location":"Haryana, India",
+      "passingYear":"2020",
+      "major": "Science & Mathematics",
+      "gpa": "9.5",
+      "images" :["parthschool.jpeg", "school2.jpg"]
+    },
+    {
+      "id":1,
+      "type":"Advanced Diploma",
+      "name":"Davis Campus, Sheridan College",
+      "location" :"Brampton, Canada",
+      "passingYear":"2024",
+      "major":"Computer Science",
+      "gpa":"3.7",
+      "images" :["sheridancollege.jpg", "sheridan2.jpg"]
+    }
+  ]
+}

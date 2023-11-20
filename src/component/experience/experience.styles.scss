@@ -1,0 +1,19 @@
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+  .experience-heading {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .experience-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
