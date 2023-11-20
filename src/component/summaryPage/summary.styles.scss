@@ -8,6 +8,9 @@
   margin-right: auto;
   position: relative;
   height: 600px;
+  z-index: 30;
+  background-color: #e6f0f7 ;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 0, 0, 0.1);
 
   .summary-first-photo-container {
     position: absolute;
@@ -22,7 +25,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-size: 25px;
+    font-size: 23px;
     text-align: center;
     width: 85%;
     margin: auto;
@@ -37,7 +40,7 @@
         .threed-effect-word {
           color: rgb(8, 138, 238);
           position: relative;
-          font-size: 32px;
+          font-size: 28px;
           z-index: 1;
           box-shadow: 2px 5px 5px 0px rgba(0, 0, 0, 0.5);
           .background-effect {
