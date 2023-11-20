@@ -1,0 +1,132 @@
+.navigation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 2.5%;
+    width: 95%;
+    background-color: #e6f0f7;
+    /* Set your desired background color */
+    color: black;
+    padding: 5px;
+    z-index: 100;
+    border-radius: 10px;
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 70px;
+        border-radius: 10px;
+        background-color: rgba(89, 175, 241, 0.288);
+        font-size: 25px;
+    }
+
+
+    .nav-functions {
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+        height: 70px;
+
+        .theme {
+            border-radius: 10px;
+            background-color: rgba(89, 175, 241, 0.288);
+            width: 70px;
+            text-align: center;
+            padding-top: 10px;
+
+            .under-heading {
+                font-size: 9px;
+            }
+            &:hover {
+                animation: focusbackground 0.3s ease-in-out forwards;
+            }&:not(:hover){
+                animation: unfocusbackground 0.3s ease-in-out forwards;
+            }
+        }
+
+        .menu-item {
+            border-radius: 10px;
+            background-color: rgba(89, 175, 241, 0.288);
+            width: 70px;
+            text-align: center;
+            padding-top: 10px;
+
+            .icon-under-heading {
+                font-size: 9px;
+            }
+            &:hover {
+                animation: focusbackground 0.3s ease-in-out forwards;
+            }&:not(:hover){
+                animation: unfocusbackground 0.3s ease-in-out;
+            }
+        }
+        .active-link {
+                background-color: rgba(3, 36, 61, 0.288);
+        }
+    }
+
+
+}
+
+
+@media only screen and (max-width: 798px) {
+    .navigation-container {
+        display: flex;
+        flex-direction: column;
+        
+
+        .logo-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 95%;
+            border-radius: 20px;
+        }
+
+        .nav-functions {
+            position: fixed;
+            bottom: 0;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            z-index: 100;
+            background-color: #e6f0f7;
+            width: 95%;
+            border-radius: 20px;
+
+            .menu-item {
+                width: 19%;
+            }
+
+            .theme {
+                width: 19%;
+
+            }
+        }
+    }
+    
+    
+}
+
+@keyframes focusbackground {
+    from{
+        background-color: rgba(89, 175, 241, 0.288);
+    }
+    to{
+        background-color: rgba(3, 36, 61, 0.288);
+    }
+}
+@keyframes unfocusbackground {
+    to{
+        background-color: rgba(89, 175, 241, 0.288);
+    }
+    from{
+        background-color: rgba(3, 36, 61, 0.288);
+    }
+}
