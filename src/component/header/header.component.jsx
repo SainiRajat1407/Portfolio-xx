@@ -76,7 +76,7 @@ const Header = () => {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}
+          duration={1000}
         >
           <AutoAwesomeIcon />
           <div className="icon-under-heading">Technical Skills</div>
@@ -87,8 +87,8 @@ const Header = () => {
           to="Experience"
           spy={true}
           smooth={true}
-          offset={-100}
-          duration={500}
+          offset={-80}
+          duration={1000}
         >
           <BusinessCenterIcon />
           <div className="icon-under-heading">Experience</div>
@@ -99,8 +99,8 @@ const Header = () => {
           to="Project"
           spy={true}
           smooth={true}
-          offset={-100}
-          duration={500}
+          offset={-80}
+          duration={1000}
         >
           <ChecklistIcon />
           <div className="icon-under-heading">Projects</div>
@@ -111,8 +111,8 @@ const Header = () => {
           to="Education"
           spy={true}
           smooth={true}
-          offset={-100}
-          duration={500}
+          offset={-80}
+          duration={1000}
         >
           <HistoryEduIcon />
           <div className="icon-under-heading">Education</div>
