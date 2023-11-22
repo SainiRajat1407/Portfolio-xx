@@ -3,6 +3,8 @@ import React from "react";
 import { Container } from "@mui/material";
 import rajatSecondPhoto from "../../asset/images/rajat.jpg";
 import rajatFirstPhoto from "../../asset/images/rajat2.jpg";
+import backgroundImage from '../../asset/images/backgroundimages/waterbackground.jpg'
+import ScrollContext from "../../context/scroll/scrollContext";
 
 const items = [
   <>
@@ -38,34 +40,16 @@ const items = [
     <span className="threed-effect-word">User-centered <span className="background-effect"></span></span> design
   </>,
 ];
-
-
-
 const Summary = () => {
-  const [mousePosition, setMousePosition] = React.useState({
-    x: null,
-    y: null,
-  });
-  const [scrollY, setScrollY] = React.useState(0);
-  React.useEffect(() => {
-    const handle = (event) => {
-      setMousePosition({ x: event.clientX, y: event.clientY });
-    };
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    document.addEventListener("mousemove", handle);
-    document.addEventListener("scroll", handleScroll);
-    return () => {
-      document.removeEventListener("mousemove", handle);
-      document.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+
+  const state = React.useContext(ScrollContext)
+  const scrollY = state[0];
+ 
   return (
-    <div className="summary-container" id="Summary">
+    <div className="summary-container" id="Summary" style={{visibility : scrollY >= 840 ? 'hidden' : 'visible' }}>
       <div
         className="summary-first-photo-container"
-        style={{ top: `${-scrollY + 290}px` }}
+        style={{ left: `${-scrollY*1 + 130}px` , top : `${scrollY+260}px`  }}
       >
         <img
           src={rajatFirstPhoto}
@@ -73,22 +57,22 @@ const Summary = () => {
           className="summary-first-photo"
         />
       </div>
-      <div className="summary-details-container">
+      <div className="summary-details-container" >
         <div className="name">Myself, Rajat Saini.</div>
         <Container className="summary-list">
 
-            {items.map((line, index) => {
-              return (
-                <li key={index} className="summary-list-item">
-                  {line}
-                </li>
-              );
-            })}
+          {items.map((line, index) => {
+            return (
+              <li key={index} className="summary-list-item">
+                {line}
+              </li>
+            );
+          })}
         </Container>
       </div>
       <div
         className="summary-second-photo-container"
-        style={{ top: `${-scrollY + 290}px` }}
+        style={{ right: `${-scrollY + 110}px` , top : `${scrollY+260}px` }}
       >
         <img
           src={rajatSecondPhoto}
@@ -96,6 +80,9 @@ const Summary = () => {
           className="summary-second-photo"
         />
       </div>
+
+      <img style={{top : `${scrollY}px` ,filter : `brightness(0.${790-scrollY})`,
+       opacity : `0.${990-scrollY}`}} className="summary-background-image" src={backgroundImage} alt="waterbackgroud" />
     </div>
   );
 };

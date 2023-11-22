@@ -5,13 +5,13 @@
     align-items: center;
     position: fixed;
     top: 0;
-    left: 2.5%;
-    width: 95%;
+    left: 0;
+    width: 100vw;
     background-color: #e6f0f7;
     /* Set your desired background color */
     color: black;
     padding: 5px;
-    z-index: 100;
+    z-index: 200;
     border-radius: 10px;
 
     .logo-container {
@@ -30,7 +30,7 @@
         flex-direction: row;
         gap: 2px;
         height: 70px;
-
+        margin-right: 20px;
         .theme {
             border-radius: 10px;
             background-color: rgba(89, 175, 241, 0.288);

@@ -3,10 +3,14 @@ import data from '../../data/details.json'
 import EducationCard from './educationCard.componet'
 import './education.styles.scss'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ScrollContext from '../../context/scroll/scrollContext';
+
 
 const Education = () => {
+  const scrollTracker = React.useContext(ScrollContext);
+  const scrollY = scrollTracker[0];
   return (
-    <div className='education-container' id='Education'>
+    <div className='education-container' id='Education' >
       <div className="education-heading">
         Education History
       </div>
@@ -18,6 +22,7 @@ const Education = () => {
         })}
         <ArrowForwardIcon className='middle-arrow'/>
       </div>
+      
     </div>
   )
 }

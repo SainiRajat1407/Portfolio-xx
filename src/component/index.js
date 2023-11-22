@@ -11,11 +11,13 @@ import ThemeState from "../context/theme/themeState";
 import Chatbot from "./chatbot/chatbot.component";
 import Skills from "./technicalSkills/technicalSkills.component";
 import Cursor from "./cursor/cursor.component";
+import ScrollState from '../context/scroll/scrollState'
 
 const Index = () => {
   return (
     <div className="index-container">
       <ThemeState>
+        <ScrollState >
         <Header />
         <Summary />
         <Skills />
@@ -26,6 +28,7 @@ const Index = () => {
         <Footer />
         <Chatbot />
         <Cursor />
+        </ScrollState>
       </ThemeState>
     </div>
   );
