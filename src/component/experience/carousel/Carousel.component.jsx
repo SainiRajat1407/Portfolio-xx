@@ -19,7 +19,6 @@ const ExperienceCarousel = () => {
     setSelectedIndex((prevIndex) => (prevIndex + 1) % data.experiences.length);
   };
 
-  console.log(selectedIndex);
 
   return (
     <div className="carousel-container">

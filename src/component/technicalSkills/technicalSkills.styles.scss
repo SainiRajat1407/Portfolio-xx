@@ -3,47 +3,34 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+  z-index: 0;
   position: relative;
   width: 100vw;
   height:100vh;
   margin-top: -70px;
+  
 
   .technical-skills-heading {
     text-align: center;
-    font-size: 40px;
-    position: absolute;
-    top: 0;
-    left:45%;
-    z-index: 100;
+    font-size: 15vh;
   }
 
   .icon-technical-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2px;
     text-align: center;
     justify-content: center;
     gap: 20px;
-    margin: 3rem;
-    position: absolute;
-    top: 5vh;
-    z-index: 100;
-    left: 20vw;
-    width: 60vw;
+    width: 80vw;
+
 
     .technical-skill {
-      background-color: rgba(89, 175, 241, 0.288);
+      background-color: rgb(80, 169, 236);
       border-radius: 10px;
-      padding-top: 3px;
-      padding-bottom: 3px;
-      padding-left: 0;
-      padding-right: 0;
-      width: 105px;
-      height: 105px;
 
       .technical-skill-sub-container {
         width: auto;
@@ -59,14 +46,14 @@
       .icon-hovered {
 
         * {
-          animation: rotateicon 0.5s ease-in-out forwards;
+          
         }
 
       }
 
       .icon-unhovered {
         * {
-          animation: rotateiconbackwards 0.5s ease-in-out forwards;
+          
         }
 
       }
@@ -74,7 +61,7 @@
   }
   .technical-skill-background{
     position: absolute;
-    z-index:-80;
+    z-index:-10;
     top: 0;
     width: 100vw;
     height: 100vh;

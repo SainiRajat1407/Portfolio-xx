@@ -1,6 +1,5 @@
 import React from "react";
 import "./contact.styles.scss";
-import space from '../../asset/images/space.png'
 
 
 const Contact = () => {

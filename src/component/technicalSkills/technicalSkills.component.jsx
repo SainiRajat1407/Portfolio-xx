@@ -13,7 +13,7 @@ import mountainsunbackground from '../../asset/images/backgroundimages/mountaisu
 import {
   SiCss3, SiFirebase, SiPostman, SiJunit5, SiEclipseide, SiApachenetbeanside
 } from "react-icons/si";
-import ScrollContext from '../../context/scroll/scrollContext';
+import {motion } from "framer-motion"
 
 const iconsArray = [<FaReact />, <FiGithub />, <FaNode />,
 <SiMysql />, <RiBootstrapLine />, <BsFiletypeJson />, <FaJava />, <BiLogoSpringBoot />,
@@ -33,35 +33,32 @@ const Skills = () => {
     newUnhoveredSkills[index] = false;
     setUnhoveredSkills(newUnhoveredSkills);
   };
-  const scrollTracker = React.useContext(ScrollContext)
-  const scrollY = scrollTracker[0];
-  console.log(scrollY)
-
   return (
-    <div className="technical-skills-main-container" id='Technical' style={{visibility : scrollY > 1820 ? "hidden" : 'visible'}}>
+    <div className="technical-skills-main-container" id='Technical' >
       <div className="technical-skills-heading"
-        style={{ position: scrollY <= 600 ? 'absolute' : "fixed", top: scrollY <= 600 ? `-${scrollY * 0.18}px` : "211px" }}>
+        >
         Technical Skills
       </div>
       <div className="icon-technical-container"
-        style={{ position: scrollY <= 600 ? 'absolute' : "fixed", top: scrollY <= 600 ? `-${scrollY * 0.15}px` : '230px' }}>
+      >
         {iconsArray.map((icon, index) => (
           <span className="technical-skill" key={index}>
-            <span
+            <motion.div
               className={`technical-skill-sub-container ${unhoveredSkills[index] ? 'icon-hovered' : 'icon-unhovered'}`}
-              onMouseOver={() => handleMouseOver(index)}
-              onMouseOut={() => handleMouseOut(index)}
+               whileHover={{ scale: 1.4 }}
+               whileTap={{
+                scale: 0.8,
+                rotate: -90,
+                borderRadius: "100%"
+              }}
             >
               {icon}
-            </span>
+            </motion.div>
           </span>
         ))}
       </div>
       <img className='technical-skill-background'
-        style={{
-          position: scrollY <= 600 ? 'absolute' : "fixed", top: scrollY <= 600 ? `-${scrollY * 0.41}px` : '75px', 
-           filter: scrollY  >= 950  ?  `brightness(0.${1190 - scrollY*0.35})` : "1"
-        }}
+        
         src={mountainsunbackground} alt="mountainsun" />
     </div>
   );

@@ -10,8 +10,8 @@ import Contact from "./contact/contact.component";
 import ThemeState from "../context/theme/themeState";
 import Chatbot from "./chatbot/chatbot.component";
 import Skills from "./technicalSkills/technicalSkills.component";
-import Cursor from "./cursor/cursor.component";
 import ScrollState from '../context/scroll/scrollState'
+import Cursor from './cursor/cursor.component'
 
 const Index = () => {
   return (

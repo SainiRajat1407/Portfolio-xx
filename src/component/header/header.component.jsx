@@ -31,7 +31,7 @@ const Header = () => {
           spy={true}
           smooth={true}
           offset={-100}
-          duration={500}
+          duration={1000}
         >
           <span>Rajat Saini</span>
         </Link>
@@ -75,7 +75,7 @@ const Header = () => {
           to="Technical"
           spy={true}
           smooth={true}
-          offset={-100}
+          offset={-30}
           duration={1000}
         >
           <AutoAwesomeIcon />
@@ -87,7 +87,7 @@ const Header = () => {
           to="Experience"
           spy={true}
           smooth={true}
-          offset={-80}
+          offset={0}
           duration={1000}
         >
           <BusinessCenterIcon />
@@ -99,7 +99,7 @@ const Header = () => {
           to="Project"
           spy={true}
           smooth={true}
-          offset={-80}
+          offset={0}
           duration={1000}
         >
           <ChecklistIcon />
@@ -111,7 +111,7 @@ const Header = () => {
           to="Education"
           spy={true}
           smooth={true}
-          offset={-80}
+          offset={0}
           duration={1000}
         >
           <HistoryEduIcon />
