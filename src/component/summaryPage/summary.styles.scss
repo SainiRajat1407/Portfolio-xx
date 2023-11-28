@@ -6,7 +6,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 10;
-  background-color: #e6f0f7 ;
+  background-color: #ecf0f1 ;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin-top: 4rem;
@@ -39,7 +39,6 @@
       justify-content: center;
       gap: 5px;
       .summary-list-item {
-        color: #f7f6f6;
         .threed-effect-word {
           color: red;
           position: relative;
@@ -72,13 +71,6 @@
       border-radius: 10px;
     }
   }
-.summary-background-image{
-  position: absolute;
-  z-index: -100;
-  height: 100vh;
-  width: 100vw;
-  filter: brightness(0.55);
-}
 }
 
 @media only screen and (max-width: 1111px) {

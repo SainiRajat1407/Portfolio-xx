@@ -1,9 +1,6 @@
 import "./summary.styles.scss";
 import React from "react";
-import { Container } from "@mui/material";
-import rajatSecondPhoto from "../../asset/images/rajat.jpg";
-import rajatFirstPhoto from "../../asset/images/rajat2.jpg";
-import backgroundImage from "../../asset/images/backgroundimages/waterbackground.jpg";
+import rajatFirstPhoto from "../../asset/images/rajat2.png";
 import { motion } from "framer-motion";
 
 const items = [
@@ -46,8 +43,7 @@ const items = [
     and Waterfall Methodologies,{" "}
     <span className="threed-effect-word">
       Scrum <span className="background-effect"></span>
-    </span>{" "}
-    and JIRA
+    </span>
   </>,
   <>
     Implementing Software design principles,{" "}
@@ -86,6 +82,7 @@ const Summary = () => {
           animate={{ x: 0, opacity: 1, scale: 1, rotateY: 0 }}
           initial={{ x: -300, opacity: 0, scale: 0.5, rotateY: 360 }}
           transition={{ duration: 2.5 }}
+          whileHover={{ scale: 1.1 }}
         />
       </div>
       <div className="summary-details-container">
@@ -107,25 +104,8 @@ const Summary = () => {
           })}
         </motion.Container>
       </div>
-      <div className="summary-second-photo-container">
-        <motion.img
-          src={rajatSecondPhoto}
-          alt="rajat"
-          className="summary-second-photo"
-          animate={{ x: 0, opacity: 1, scale: 1 ,rotateY: -360}}
-          initial={{ x: 300, opacity: 0, scale: 0.5, rotateY: 0 }}
-          transition={{ duration: 2.5 }}
-        />
-      </div>
+    
 
-      <motion.img
-        src={backgroundImage}
-        alt="waterbackgroud"
-        className="summary-background-image"
-        animate={{ opacity: 1, scale: 1 }}
-        initial={{ opacity: 0, scale: 0.5 }}
-        transition={{ duration: 1 }}
-      />
     </div>
   );
 };
