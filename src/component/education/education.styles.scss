@@ -1,0 +1,56 @@
+.education-container{
+    display: flex;
+
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    .education-heading{
+        font-size: 40px;
+        text-align: center;
+        z-index: 100;
+    }
+    .education-details-container{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        z-index: 100;
+        top: 275px;
+        .middle-arrow{
+            position: absolute;
+            left: 50%;
+        }
+        .education-card-container{
+          width: 400px;
+          overflow: hidden;
+          .education-card-photo-container{
+            img{
+              width: 400px;
+              height: 270px;
+            }
+          }
+        }
+
+    }
+    .education-background-image{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 10;
+  
+    }
+}
+
+@media only screen and (max-width: 853px) {
+  .middle-arrow{
+    transform: rotate(90deg);
+  }
+}

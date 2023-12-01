@@ -1,0 +1,124 @@
+{
+  "experiences": [
+    {
+      "id": 0,
+      "jobTitle": "Office Administrator",
+      "startDate": "July 2021",
+      "endDate": "january 2022",
+      "company": "BannerJee Global",
+      "description": [
+        "Assisting students with all IELTS modules by highlighting their strong areas, flaws and areas of improvement.",
+        "Conducting sessions for One-to-one discussions with students about their assignments. ",
+        "Supervising and checking tests for language proficiency. ",
+        "Various official duties as in conducting classes, preparation of study material and setting up online classes.",
+        "Taking initiatives and suggesting potential solutions for managing various tasks.",
+        " Sharing insights and best practices within the team to foster a continuous learning environment."
+      ]
+    },
+    {
+      "id": 1,
+      "jobTitle": "Junior Programmer",
+      "startDate": "Jan 2023",
+      "endDate": "April 2023",
+      "company": "Jusitice Technology Services (SOLGEN)",
+      "description": [
+        "Provided company users with tech support for IT problems",
+        "Maintained knowledge of advances in information technology systems and applications.",
+        "Tracked and prioritized IT tickets and requests based on severity and potential business disruptions involved.",
+        "Assisted customers with various types of technical issues via email, live chat and telephone.",
+        "Promoted high customer satisfaction by resolving problems with knowledgeable  and friendly service",
+        "Asset Management and Asset Tracking"
+      ]
+    },
+    {
+      "id": 2,
+      "jobTitle": "Laptop and Classroom support Technologist",
+      "startDate": "August 2023",
+      "endDate": "Current",
+      "company": "Sheridan College",
+      "description": [
+        "Provided exceptional customer service, assisting clients courteously and efficiently.",
+        "Exhibited String verbal and written communication skills with a high level of professionalism.",
+        "Effectively conveyed technical information to individuals with diverse backgrounds.",
+        "Demonstrated proficient knowledge of Windows 10 & 11 And MS Office 365.",
+        "Showcased expertise in Audio-Visualequipment, including projectors and microphones.",
+        "Scquired knowledge of current Android and IOS devices, providing comprehensive technical support."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "UI/UX realtor Application",
+      "description": [
+        "Made a user-centered protoype of a realtor application for Adroid/IOS as a part of a team of 4 members.",
+        "Desgined the basic wireframe and later made its prototype using Adobe XD.",
+        "Made sign up, Home page, Home Screen, rent/sell talb along with animation and transitions",
+        "Documented the userrequirements and the usre cases as a part of the progress report.",
+        "Learned skills like team work, time management, communication, creativity and problem solving."
+      ],
+      "link": "https://xd.adobe.com/view/23eb5991-4fb7-4296-bc8f-cff93bb6165b-76b8/",
+      "technologyUsed": "Adobe XD",
+      "others": "This is the remaining details."
+    },
+    {
+      "id": 2,
+      "name": "Sheridan Bagle Cart",
+      "description": [
+        "Made a GUI Application using Java Fx in NetBeans named Sheridan Shopping Cart.",
+        "Designed its basic layout in the Scene Builder and then coding it's to make its components and buttons functional",
+        "Usedin OOP principles to make the code extensible and reusable.",
+        " Sharing insights and best practices within the team to foster a continuous learning environment.",
+        "Key Feature - Calculating the price, Saving the receipt and printing the receipt."
+      ],
+      "technologyUsed": "Java Fx, Netbeans, Scene Builder",
+      "others": "This is the remaining details."
+    },
+    {
+      "id": 3,
+      "name": "Weather Application",
+      "description": [
+        "Made a Weather Application using JavaScript, HTML and CSS.",
+        "The data for the applicaiton is from OPENWeather API which is a Restful API",
+        "Used Bootstrap to make the Web application responsive"
+      ],
+      "link": "https:///rajathadd.github.io/WeatherApp/",
+      "technologyUsed": "JavaScriprt, HTML, CSS",
+      "others": "This is the remaining details."
+    },
+    {
+      "id": 4,
+      "name": "Takeaway Card Game",
+      "description": [
+        "Design a console interface that is easy to navigate and provides clear instructions to the user using JAVA",
+        "Implement clear and concise prompts to guide the player through each turn or level",
+        "Implement robust error handling and input validation to prevent unexpected crashes and provide helpful feedback to the user",
+        "Clearly communicate any errors or invalid inputs and guide the player on how to correct them"
+      ],
+      "technologyUsed": "Java, NetBeans",
+      "others": "This is the remaining details."
+    }
+  ],
+  "education": [
+    {
+      "id": 0,
+      "type": "Seconday Education",
+      "name": "Parth Public Senior Secondary School",
+      "location": "Haryana, India",
+      "passingYear": "2020",
+      "major": "Science & Mathematics",
+      "gpa": "9.5",
+      "images": ["parthschool.jpeg", "school2.jpg"]
+    },
+    {
+      "id": 1,
+      "type": "Advanced Diploma",
+      "name": "Davis Campus, Sheridan College",
+      "location": "Brampton, Canada",
+      "passingYear": "2024",
+      "major": "Computer Science",
+      "gpa": "3.7",
+      "images": ["sheridancollege.jpg", "sheridan2.jpg"]
+    }
+  ]
+}

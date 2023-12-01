@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  position: relative;
+  
+
+
+  .experience-details-container {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    height: 75vh;
+    gap: 10px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow:  0 0 25px rgba(0, 0, 0, 0.5);
+    font-family: 'Libre Baskerville', serif;
+    .experience-card{
+      background-color: rgba(0, 0, 0, 0.808);
+      width: 25vw;
+      height: 50vh;
+      border: 1px solid black;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
+      color: white;
+      box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+      .job-heading{}
+      .job-description{
+        color: gray;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .job-time{}
+      .job-company{}
+    }
+  }
+
+  .experience-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+    filter: brightness(0.7);
+  }
+}
