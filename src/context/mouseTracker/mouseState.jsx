@@ -1,14 +1,14 @@
 import React from 'react'
 import MousePostionContext from './mouseContext'
 
-const MousePostionState = (props) => {
-    const [mousePostion, setMousePostion] = React.useState({
+const MousePositionState = (props) => {
+    const [mousePosition, setMousePosition] = React.useState({
         x : null,
         y : null
     })
 
     const handleMouseMove = (event) => {
-        setMousePostion({x : event.clientX , y : event.clientY})
+        setMousePosition({x : event.clientX , y : event.clientY})
     
     }
     React.useEffect(() => {
@@ -19,8 +19,10 @@ const MousePostionState = (props) => {
         }
     }, [])
     return(
-        <MousePostionContext.Provider value={[mousePostion, setMousePostion]}>
+        <MousePostionContext.Provider value={[mousePosition, setMousePosition]}>
             {props.children}
         </MousePostionContext.Provider>
     )
 }
+
+export default MousePositionState;

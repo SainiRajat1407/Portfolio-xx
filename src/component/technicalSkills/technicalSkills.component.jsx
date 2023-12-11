@@ -39,7 +39,8 @@ const iconsSecondArray = [
   <SiApachenetbeanside />,
   <SiPostman />,
   <SiFirebase />,
-  <SiCss3 />];
+  <SiCss3 />,
+];
 
 const Skills = () => {
   const scrollContext = React.useContext(ScrollContext);
@@ -47,11 +48,22 @@ const Skills = () => {
   const scrollInVh = scrollContext[2];
   console.log(scrollInVh, scrollY);
   return (
-    <div className="technical-skills-main-container" id="Technical" style={{height : scrollInVh > 100 && scrollInVh < 150 ? `${200-scrollInVh}vh` : scrollInVh < 101 ? "100vh" : "50vh"}}>
+    <div
+      className="technical-skills-main-container"
+      id="Technical"
+      style={{
+        height:
+          scrollInVh > 100 && scrollInVh < 150
+            ? `${200 - scrollInVh}vh`
+            : scrollInVh < 101
+            ? "100vh"
+            : "50vh",
+      }}
+    >
       <div className="icon-technical-container">
         {iconsFirstArray.map((icon, index) => {
           return (
-            <span
+            <div
               className="technical-skill"
               key={index}
               style={{
@@ -75,12 +87,12 @@ const Skills = () => {
               >
                 {icon}
               </motion.div>
-            </span>
+            </div>
           );
         })}
         {iconsSecondArray.map((icon, index) => {
           return (
-            <span
+            <div
               className="technical-skill"
               key={index}
               style={{
@@ -104,7 +116,7 @@ const Skills = () => {
               >
                 {icon}
               </motion.div>
-            </span>
+            </div>
           );
         })}
       </div>

@@ -85,18 +85,6 @@
       "link": "https:///rajathadd.github.io/WeatherApp/",
       "technologyUsed": "JavaScriprt, HTML, CSS",
       "others": "This is the remaining details."
-    },
-    {
-      "id": 4,
-      "name": "Takeaway Card Game",
-      "description": [
-        "Design a console interface that is easy to navigate and provides clear instructions to the user using JAVA",
-        "Implement clear and concise prompts to guide the player through each turn or level",
-        "Implement robust error handling and input validation to prevent unexpected crashes and provide helpful feedback to the user",
-        "Clearly communicate any errors or invalid inputs and guide the player on how to correct them"
-      ],
-      "technologyUsed": "Java, NetBeans",
-      "others": "This is the remaining details."
     }
   ],
   "education": [

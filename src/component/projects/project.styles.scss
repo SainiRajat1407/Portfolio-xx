@@ -1,58 +1,167 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
 
 .project-container {
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  .project-heading-top,
+  .project-heading-bottom {
+    position: absolute;
+    font-size: 50px;
+    color: black;
+  }
+  .project-heading-top {
+    top: 0;
+    left: 0;
+  }
+  .project-heading-bottom {
+    bottom: 0;
+    right: 0;
+  }
+  .project-card {
+    position: relative;
+    width: 30vw;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.329);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
-    position: relative;
+    .project-popup-btn {
+      position: absolute;
+      color: red;
+      top: 80%;
+      left: 80%;
+      font-size: 40px;
+    }
+    .project-description {
+      width: 80%;
+      overflow: hidden;
+    }
+    .project-name {
+      font-size: 40px;
+      text-align: center;
+    }
+    .project-technology-used {
+      font-size: 27px;
+      color: white;
+      text-align: center;
+    }
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 100;
-
-    .project-heading {
-        text-align: center;
-        font-size: 40px;
-        position: absolute;
-        left: 45vw;
-        top: 80px;
-        z-index: 100;
+    background: rgba(0, 0, 0, 0.411);
+    backdrop-filter: blur(51px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    z-index: 200;
+    color: white;
+    border-radius: 0;
+    .project-popup-btn {
+      font-size: 75px;
+      z-index: 500;
     }
-
-    .project-details-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: row;
-        gap: 30px;
-        font-family: 'Open Sans', sans-serif;
-        width: 100%;
-        position: absolute;
-        top: 275px;
-        z-index: 100;
-
-        .project-details-item {
-            width: 300px;
-        }
+    .project-description {
+      font-size: 20px;
+      width: 70%;
     }
-    .project-background-container{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 10;
-    
+    .project-instructions {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      color: red;
     }
+    .project-photo {
+      z-index: 300;
+      position: absolute;
+      border: none;
+      img {
+        width: 400px;
+      }
+    }
+  }
 }
 
-@media only screen and (max-width: 798px) {
-    .project-container {
-        .project-details-container {
-
-            .project-details-item {
-                width: 400px;
-            }
-        }
+@media only screen and (max-width: 1098px) {
+  .project-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 2px;
+    .project-heading-top,
+    .project-heading-bottom {
+      font-size: 30px;
     }
+    .project-heading-top {
+      top: -20px;
+    }
+    .project-card {
+      width: 45vw;
+      height: 44vh;
+
+      .project-name {
+        font-size: 20px;
+      }
+      .project-technology-used {
+        font-size: 20px;
+      }
+      .project-description {
+        font-size: 14px;
+      }
+    }
+    .overlay {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      .project-photo{
+        .first-project{
+          width:400px;
+          height: 650px;
+        }
+        .second-project{
+          width:350px;
+          height: 450px;
+        }
+        .third-project{
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 501px) {
+  .project-container {
+    .project-card {
+      width: 90vw;
+      height: 30vh;
+    }
+    .overlay {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      .project-photo {
+        .first-project{
+          width:250px;
+          height: 450px;
+        }
+        .second-project{
+          width:350px;
+          height: 450px;
+        }
+      }
+    }
+  }
 }

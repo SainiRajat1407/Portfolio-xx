@@ -1,6 +1,6 @@
 import React from 'react'
 
 
-const MousePostionContext = React.createContext();
+const MousePositionContext = React.createContext();
 
-export default MousePostionContext;
+export default MousePositionContext;

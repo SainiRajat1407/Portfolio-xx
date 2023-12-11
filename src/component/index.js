@@ -10,25 +10,27 @@ import Contact from "./contact/contact.component";
 import ThemeState from "../context/theme/themeState";
 import Chatbot from "./chatbot/chatbot.component";
 import Skills from "./technicalSkills/technicalSkills.component";
-import ScrollState from '../context/scroll/scrollState'
-import Cursor from './cursor/cursor.component'
+import ScrollState from "../context/scroll/scrollState";
+import Cursor from "./cursor/cursor.component";
+import MousePositionState from "../context/mouseTracker/mouseState";
 
 const Index = () => {
   return (
     <div className="index-container">
       <ThemeState>
-        <ScrollState >
-        <Header />
-        <Summary />
-        <Skills />
-        <Experience />
-        <Project />
-        <Education />
-        <Contact />
-        <Footer />
-        <Chatbot />
-        <Cursor />
-        </ScrollState>
+        <MousePositionState>
+          <ScrollState>
+            <Header />
+            <Summary />
+            <Skills />
+            <Experience />
+            <Project />
+            <Education />
+            <Footer />
+            <Chatbot />
+            <Cursor />
+          </ScrollState>
+        </MousePositionState>
       </ThemeState>
     </div>
   );

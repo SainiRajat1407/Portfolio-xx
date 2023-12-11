@@ -2,6 +2,8 @@
 .summary-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -17,21 +19,23 @@
   }
   .summary-tagline{
     z-index: 100;
-    position: absolute;
+    position: relative;
     color: white;
-    top: 22vh;
-    left: 15vw;
-    font-size: 16vh;
+    font-size: 10vw;
     text-align: center;
-    width: 70vw;
     font-family: 'Nova Square', sans-serif;
+    width: 90vw;
 
   }
 
 }
 
-@media only screen and (max-width: 1111px) {
-
+@media only screen and (max-width: 1177px) {
+  .summary-container {
+    .summary-tagline{
+      font-size: 13vw;
+    }
+  }
 }
 
 
