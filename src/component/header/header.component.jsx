@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import "./header.style.scss";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import NightlightRoundIcon from "@mui/icons-material/NightlightRound";
-import ColorLensIcon from "@mui/icons-material/ColorLens";
-import BrushIcon from "@mui/icons-material/Brush";
+
 import ThemeContext from "../../context/theme/themeContext";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import ChecklistIcon from "@mui/icons-material/Checklist";
@@ -20,6 +19,7 @@ const Header = () => {
   const scrollTracker = React.useContext(ScrollContext);
   const scrollInVh = scrollTracker[2];
   const [isContactFormOpened, setIsContactFormOpened] = React.useState(false);
+  const themeContext = React.useContext(ThemeContext)
 
   const modeChange = () => {
     theme.setLightMode(!theme.lightMode);
@@ -62,7 +62,7 @@ const Header = () => {
           ) : (
             ""
           )}
-          {!theme.themeOne ? (
+          {/* {theme.themeOne ? (
             <div className="theme" onClick={themeChange}>
               <ColorLensIcon />
               <div className="under-heading">theme 1</div>
@@ -77,7 +77,7 @@ const Header = () => {
             </div>
           ) : (
             ""
-          )}
+          )} */}
           <div
             className="menu-item"
             onClick={() => handleScrollButton(100)}
@@ -134,7 +134,7 @@ const Header = () => {
             initial={{width: 0,  opacity: 0 ,zIndex: 0,position: "relative"}}
             animate={{width: "100vw",  opacity: 1 ,zIndex: 500,position: "fixed"}}
             transition={{ duration: 0.5 }}
-            exit={{ x: -300, opacity: 0 }}
+            exit={{ opacity: 0 }}
           >
             <Contact />
             <IoClose
@@ -144,6 +144,7 @@ const Header = () => {
                 zIndex: 500,
                 fontSize: "100px",
                 right: "0",
+                bottom: "0",
                 color: "white",
               }}
             />

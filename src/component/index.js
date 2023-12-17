@@ -6,13 +6,14 @@ import "./index.scss";
 import Experience from "./experience/experience.component";
 import Education from "./education/education.component";
 import Project from "./projects/project.component";
-import Contact from "./contact/contact.component";
 import ThemeState from "../context/theme/themeState";
 import Chatbot from "./chatbot/chatbot.component";
 import Skills from "./technicalSkills/technicalSkills.component";
 import ScrollState from "../context/scroll/scrollState";
 import Cursor from "./cursor/cursor.component";
 import MousePositionState from "../context/mouseTracker/mouseState";
+import DeviceState from "../context/deviceTracker/deviceState";
+
 
 const Index = () => {
   return (
@@ -20,15 +21,17 @@ const Index = () => {
       <ThemeState>
         <MousePositionState>
           <ScrollState>
-            <Header />
-            <Summary />
-            <Skills />
-            <Experience />
-            <Project />
-            <Education />
-            <Footer />
-            <Chatbot />
-            <Cursor />
+            <DeviceState>
+              <Header />
+              <Summary />
+              <Skills />
+              <Experience />
+              <Project />
+              <Education />
+              <Footer />
+              <Chatbot />
+              <Cursor />
+            </DeviceState>
           </ScrollState>
         </MousePositionState>
       </ThemeState>

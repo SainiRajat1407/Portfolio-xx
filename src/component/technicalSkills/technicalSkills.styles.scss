@@ -10,6 +10,17 @@
   position: relative;
   width: 100vw;
   height:100vh;
+  overflow: hidden;
+
+  .technical-up-arrow{
+    position: absolute;
+    right: 10vw;
+    z-index: 11;
+    *{width: 50px;
+      height: 50px;
+      pointer-events: none;
+      color: white;}
+  }
   
   .icon-technical-container {
     display: flex;
@@ -43,8 +54,7 @@
   .skill-rock-background{
     position: absolute;
     z-index:-10;
-    top: 0;
-    width: 100vw;
+    top: 0;    width: 100vw;
     height: 100vh;
     pointer-events: none;
     filter: brightness(0.9);
@@ -52,7 +62,6 @@
   .skill-rock-middle{
     position: absolute;
     z-index:-5;
-    top: 0vh;
     width: 100vw;
     height: 100vh;
     pointer-events: none;
@@ -60,7 +69,7 @@
   .skill-rock-foreground{
     position: absolute;
     z-index:10;
-    top: 0vh;
+
     width: 100vw;
     height: 100vh;
     pointer-events: none;
@@ -107,10 +116,6 @@
 
   .technical-skills-main-container {
     .icon-technical-container{
-      display: flex;
-      flex-direction: row;
-      flex-wrap:wrap;
-      position: static;
       
       .technical-skill{
         position: static;
@@ -126,4 +131,5 @@
       }
     }
   }
+
 }

@@ -88,7 +88,7 @@ const Contact = (props) => {
                 required
               ></textarea>
             </div>
-            <input type="submit" value="Contact me" />
+            <input type="submit" value="Contact me" className="submit-button" />
           </form>
         </div>
       </div>

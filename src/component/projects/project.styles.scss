@@ -93,6 +93,12 @@
       }
     }
   }
+  .project-background{
+    position:absolute;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+  }
 }
 
 @media only screen and (max-width: 1098px) {
@@ -160,6 +166,9 @@
         .second-project{
           width:350px;
           height: 450px;
+        }
+        .third-project{
+          width: 300px;
         }
       }
     }

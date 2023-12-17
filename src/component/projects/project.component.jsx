@@ -17,6 +17,9 @@ import weatherHome from "../../asset/images/weatherapplication/home.png";
 import weatherSearch from "../../asset/images/weatherapplication/mobileview.png";
 import MousePositionContext from "../../context/mouseTracker/mouseContext";
 import ScrollContext from "../../context/scroll/scrollContext";
+import {motion , AnimatePresence} from "framer-motion";
+import DeviceContext from "../../context/deviceTracker/deviceContext";
+import ThemeContext from "../../context/theme/themeContext";
 
 const projectImages = {
   realtorApp: [
@@ -45,6 +48,9 @@ const Project = () => {
 
   const scrollContext = React.useContext(ScrollContext);
   const scrollInVh = scrollContext[2];
+
+  const deviceContext = React.useContext(DeviceContext);
+  const themeContext = React.useContext(ThemeContext)
   const [overlays, setOverlays] = React.useState({
     1: false,
     2: false,
@@ -90,16 +96,17 @@ const Project = () => {
   };
 
   return (
-    <div className="project-container">
+    <div className="project-container" style={{backgroundColor : themeContext['darkMode'] ? "#2B2A4C" : ""}}>
       {data.projects.map((item) => {
         return (
           <div
             className={`project-card ${overlays[item.id + 1] ? "overlay" : ""}`}
-            style={{ zIndex: isOverlayed ? 250 : "" }}
+            style={{ zIndex: isOverlayed ? 250 : "", backgroundColor : themeContext['darkMode'] ? "#BBAB8C" : "" }}
             key={item.id}
             {...(currentProject === item.id
               ? { onClick: () => handleImagesDisplayOnOverlay(item.id) }
               : null)}
+            
           >
             <div className="project-name">{item.name}</div>
             {isOverlayed && (
@@ -145,13 +152,17 @@ const Project = () => {
                       ? "first-project"
                       : item.id === 2
                       ? "second-project"
-                      : "thirdProject"
+                      : "third-project"
                   }
                 />{" "}
               </div>
             )}
             <div className="project-technology-used">{item.technologyUsed}</div>
-            <div className="project-description">{item.description}</div>
+            <div className="project-description">
+              {item.description.map((item) => {
+                return <div key={item}>{item}</div>;
+              })}
+            </div>
           </div>
         );
       })}
@@ -162,6 +173,7 @@ const Project = () => {
             scrollInVh > 210 && scrollInVh < 280
               ? `${scrollInVh - 210}vw`
               : "0",
+              color : themeContext['darkMode'] ? "white" : ""
         }}
       >
         My Projects
