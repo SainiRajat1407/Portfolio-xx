@@ -13,7 +13,7 @@ const Education = () => {
   return (
     <div className="education-container" id="Education" style={{backgroundColor : themeContext['darkMode'] ? "#2B2A4C" : ""}}>
       <div className="education-details-container">
-        {data.education.map((item, index) => {
+        {data.education.map((item) => {
           return (
             <>
               <div key={item.id} className="education-card" style={{ backgroundColor : themeContext['darkMode'] ? "#BBAB8C" : "" }} >
@@ -37,8 +37,8 @@ const Education = () => {
         className="education-heading-top"
         style={{
           left:
-            scrollInVh > 310 && scrollInVh < 380
-              ? `${scrollInVh - 310}vw`
+            scrollInVh > 365 && scrollInVh < 401
+              ? `${scrollInVh - 365}vw`
               : "0",
               color : themeContext['darkMode'] ? "white" : ""
         }}

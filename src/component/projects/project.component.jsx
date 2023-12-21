@@ -17,7 +17,6 @@ import weatherHome from "../../asset/images/weatherapplication/home.png";
 import weatherSearch from "../../asset/images/weatherapplication/mobileview.png";
 import MousePositionContext from "../../context/mouseTracker/mouseContext";
 import ScrollContext from "../../context/scroll/scrollContext";
-import {motion , AnimatePresence} from "framer-motion";
 import DeviceContext from "../../context/deviceTracker/deviceContext";
 import ThemeContext from "../../context/theme/themeContext";
 
@@ -96,12 +95,12 @@ const Project = () => {
   };
 
   return (
-    <div className="project-container" style={{backgroundColor : themeContext['darkMode'] ? "#2B2A4C" : ""}}>
+    <div className="project-container" style={{backgroundColor : themeContext['darkMode'] ? "#2B2A4C" : "white"}}>
       {data.projects.map((item) => {
         return (
           <div
             className={`project-card ${overlays[item.id + 1] ? "overlay" : ""}`}
-            style={{ zIndex: isOverlayed ? 250 : "", backgroundColor : themeContext['darkMode'] ? "#BBAB8C" : "" }}
+            style={{  backgroundColor : themeContext['darkMode'] ? "#BBAB8C" : "" }}
             key={item.id}
             {...(currentProject === item.id
               ? { onClick: () => handleImagesDisplayOnOverlay(item.id) }
@@ -140,8 +139,8 @@ const Project = () => {
               <div
                 className="project-photo"
                 style={{
-                  top: mousePosition.y + 40,
-                  left: mousePosition.x + 40,
+                  top: mousePosition.y + 20,
+                  left: mousePosition.x + 20,
                 }}
               >
                 <img
@@ -170,8 +169,8 @@ const Project = () => {
         className="project-heading-top"
         style={{
           left:
-            scrollInVh > 210 && scrollInVh < 280
-              ? `${scrollInVh - 210}vw`
+            scrollInVh > 265 && scrollInVh < 320
+              ? `${scrollInVh - 265}vw`
               : "0",
               color : themeContext['darkMode'] ? "white" : ""
         }}

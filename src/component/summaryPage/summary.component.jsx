@@ -6,9 +6,6 @@ import ScrollContext from "../../context/scroll/scrollContext";
 import ThemeContext from "../../context/theme/themeContext";
 import backgroundVideo2 from "../../asset/videos/summary/summarybackground.mp4";
 import DeviceContext from "../../context/deviceTracker/deviceContext";
-import ColorLensIcon from "@mui/icons-material/ColorLens";
-import BrushIcon from "@mui/icons-material/Brush";
-import ThemeToggle from "../themeChangeCompnents/themeChange.component";
 
 const tagline = [
   <>
@@ -23,10 +20,6 @@ const Summary = () => {
   const themeContext = React.useContext(ThemeContext);
   const deviceContext = React.useContext(DeviceContext)
 
-  const themeChange = () => {
-    themeContext.setThemeOne(!themeContext.themeOne);
-    themeContext.setThemeTwo(!themeContext.themeTwo);
-  }
 
   const scrollInVh = scrollTracker[2];
   return (
@@ -35,7 +28,7 @@ const Summary = () => {
       id="Summary"
       style={{
         top: scrollInVh >= 0 && scrollInVh <= 99 ? "0" : "",
-        visibility: scrollInVh > 99 ? "hidden" : "",
+        visibility: scrollInVh > 99 ? "hidden" : "visible",
       }}
     >
       <div
@@ -79,7 +72,6 @@ const Summary = () => {
         />
       )}
       </AnimatePresence>
-      <ThemeToggle />
           
     </div>
   );

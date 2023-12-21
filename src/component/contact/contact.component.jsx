@@ -8,38 +8,40 @@ const publicKey = "8WlImGVMZxBNHsfbt";
 
 const Contact = (props) => {
   const [formData, setFormData] = React.useState({
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
     message: "",
   });
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
+
+
   const form = useRef();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    console.log(formData);
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
     if (
-      formData.name === "" ||
-      formData.email === "" ||
-      formData.message === ""
+      formData.user_name !== "" ||
+      formData.user_email !== "" ||
+      formData.message !== ""
     ) {
       emailjs.sendForm(servieId, templateId, form.current, publicKey).then(
         (result) => {
-          console.log(result.text);
+          setFormData({
+            user_name: "",
+            user_email: "",
+            message: "",
+          });
+          setIsSubmitted(true)
         },
         (error) => {
-          console.log(error.text);
         }
       );
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
     }
+    
   };
 
   return (
@@ -57,7 +59,8 @@ const Contact = (props) => {
               <input
                 type="text"
                 name="user_name"
-                id="name"
+                value={formData.user_name}
+                id="user_name"
                 maximun="25"
                 minimun="5"
                 onChange={handleChange}
@@ -71,6 +74,7 @@ const Contact = (props) => {
                 type="email"
                 name="user_email"
                 id="email"
+                value={formData.user_email}
                 required
                 placeholder="Enter your email..."
                 onChange={handleChange}
@@ -85,11 +89,14 @@ const Contact = (props) => {
                 rows="8"
                 onChange={handleChange}
                 placeholder="Enter your message..."
+                value={formData.message}
                 required
               ></textarea>
             </div>
             <input type="submit" value="Contact me" className="submit-button" />
+            {isSubmitted && (<div style={{color: "green"}}>Thanks for contacting!</div>)  }
           </form>
+        
         </div>
       </div>
     </>

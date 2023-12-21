@@ -4,7 +4,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 0, 0, 0.1);
   z-index: 0;
   position: relative;
@@ -69,7 +68,6 @@
   .skill-rock-foreground{
     position: absolute;
     z-index:10;
-
     width: 100vw;
     height: 100vh;
     pointer-events: none;
@@ -89,13 +87,20 @@
         }
       }
     }
+
+    .skill-rock-middle{
+      width: 140vw;
+    }
+    .skill-rock-foreground{
+      width: 140vw;
+    }
   }
 }
 
 @media screen and (max-width: 979px) {
 
   .technical-skills-main-container {
-    
+    position: relative;
     .icon-technical-container{
       display: flex;
       flex-direction: row;
@@ -103,13 +108,25 @@
       position: static;
       .technical-skill{
         position: static;
+        width: 90px;
+          height: 90px;
         .technical-skill-sub-container{
           *{
-            width: 140px;
+            width: 90px;
+            height: 90px;
           }
         }
       }
     }
+
+    .skill-rock-middle{
+      width: 160vw;
+      left: 0;
+    }
+    .skill-rock-foreground{
+      width: 140vw;
+    }
+
   }
 }
 @media screen and (max-width: 637px) {
@@ -118,17 +135,25 @@
     .icon-technical-container{
       
       .technical-skill{
-        position: static;
-        width: 90px;
-        height: 90px;
+        width: 70px;
+        height: 70px;
 
         .technical-skill-sub-container{
           *{
-            width: 90px;
-            height: 90px;
+            width: 70px;
+            height: 70px;
           }
         }
       }
+    }
+
+    .skill-rock-middle{
+      width: 190vw;
+      left: 0;
+    }
+    .skill-rock-foreground{
+      width: 180vw;
+    
     }
   }
 

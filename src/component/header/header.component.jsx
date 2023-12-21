@@ -13,14 +13,15 @@ import ScrollContext from "../../context/scroll/scrollContext";
 import Contact from "../contact/contact.component";
 import { IoClose } from "react-icons/io5";
 import { AnimatePresence, motion } from "framer-motion";
+import BrushIcon from "@mui/icons-material/Brush";
+import ColorLensIcon from "@mui/icons-material/ColorLens";
 
 const Header = () => {
   const theme = useContext(ThemeContext);
   const scrollTracker = React.useContext(ScrollContext);
   const scrollInVh = scrollTracker[2];
   const [isContactFormOpened, setIsContactFormOpened] = React.useState(false);
-  const themeContext = React.useContext(ThemeContext)
-
+  console.log(scrollInVh)
   const modeChange = () => {
     theme.setLightMode(!theme.lightMode);
     theme.setDarkMode(!theme.darkMode);
@@ -47,7 +48,7 @@ const Header = () => {
       <div className="navigation-container">
         <div className="nav-functions">
           {theme.lightMode ? (
-            <div className="theme" onClick={modeChange}>
+            <div className="theme" onClick={modeChange} style={{color: "yellow"}}>
               <LightModeIcon />
               <div className="under-heading">Light</div>
             </div>
@@ -55,15 +56,15 @@ const Header = () => {
             ""
           )}
           {theme.darkMode ? (
-            <div className="theme" onClick={modeChange}>
+            <div className="theme" onClick={modeChange} >
               <NightlightRoundIcon />
               <div className="under-heading">Dark</div>
             </div>
           ) : (
             ""
           )}
-          {/* {theme.themeOne ? (
-            <div className="theme" onClick={themeChange}>
+          {theme.themeOne ? (
+            <div className="theme" onClick={themeChange} style={{color: "orange"}}>
               <ColorLensIcon />
               <div className="under-heading">theme 1</div>
             </div>
@@ -71,18 +72,18 @@ const Header = () => {
             ""
           )}
           {theme.themeTwo ? (
-            <div className="theme" onClick={themeChange}>
+            <div className="theme" onClick={themeChange} style={{color: "yellow"}}>
               <BrushIcon />
               <div className="under-heading">theme 2</div>
             </div>
           ) : (
             ""
-          )} */}
+          )}
           <div
             className="menu-item"
             onClick={() => handleScrollButton(100)}
             style={{
-              color: scrollInVh > 99 && scrollInVh < 150 ? "yellow" : "white",
+              color: scrollInVh > 99 && scrollInVh < 200 ? "yellow" : "white",
             }}
           >
             <AutoAwesomeIcon />
@@ -91,9 +92,9 @@ const Header = () => {
 
           <div
             className="menu-item"
-            onClick={() => handleScrollButton(151)}
+            onClick={() => handleScrollButton(201)}
             style={{
-              color: scrollInVh > 150 && scrollInVh < 250 ? "yellow" : "white",
+              color: scrollInVh > 200 && scrollInVh < 300 ? "yellow" : "white",
             }}
           >
             <BusinessCenterIcon />
@@ -101,9 +102,9 @@ const Header = () => {
           </div>
           <div
             className="menu-item"
-            onClick={() => handleScrollButton(251)}
+            onClick={() => handleScrollButton(301)}
             style={{
-              color: scrollInVh > 250 && scrollInVh < 350 ? "yellow" : "white",
+              color: scrollInVh > 300 && scrollInVh < 400 ? "yellow" : "white",
             }}
           >
             <ChecklistIcon />
@@ -111,9 +112,9 @@ const Header = () => {
           </div>
           <div
             className="menu-item"
-            onClick={() => handleScrollButton(351)}
+            onClick={() => handleScrollButton(400)}
             style={{
-              color: scrollInVh > 349 && scrollInVh < 450 ? "yellow" : "white",
+              color: scrollInVh > 399 && scrollInVh < 500 ? "yellow" : "white",
             }}
           >
             <HistoryEduIcon />

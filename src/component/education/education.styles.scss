@@ -69,7 +69,15 @@
   .education-container {
 
     .education-heading-top{
-      font-size:35px;
+      font-size:25px;
+      top: 20px;
+    }
+    .education-details-container{
+      .education-card{
+        .education-card-heading ,.education-institution{
+          font-size: 25px;
+        }
+      }
     }
     
   }

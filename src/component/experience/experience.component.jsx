@@ -11,7 +11,7 @@ import bottomBackground from "../../asset/images/backgroundimages/experienceback
 import DeviceContext from "../../context/deviceTracker/deviceContext";
 import backsky from "../../asset/images/backgroundimages/experiencebackground/backgroundnightsky.jpg";
 import mounstainForeground from "../../asset/images/backgroundimages/experiencebackground/mountainforground.png";
-import ThemeToggle from "../themeChangeCompnents/themeChange.component";
+
 const Experience = () => {
   const [isOverlayed, setIdOverlayed] = React.useState(true);
   const scrollContext = React.useContext(ScrollContext);
@@ -34,7 +34,7 @@ const Experience = () => {
   return (
     <div className="experience-container" id="Experience">
       <div className="experience-details-container">
-        {data.experiences.map((item, index) => {
+        {data.experiences.map((item) => {
           return (
             <motion.div
               key={item.id}
@@ -151,15 +151,14 @@ const Experience = () => {
         className="experience-heading-top"
         style={{
           left:
-            scrollInVh > 110 && scrollInVh < 180
-              ? `${scrollInVh - 110}vw`
+            scrollInVh > 165 && scrollInVh < 220
+              ? `${scrollInVh - 165}vw`
               : "0",
-          top: "40px",
+          top: "0",
         }}
       >
-        My Experience
+        Experience
       </div>
-      <ThemeToggle />
     </div>
   );
 };
