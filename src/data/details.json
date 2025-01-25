@@ -1,0 +1,102 @@
+{
+  "experiences": [
+    
+    {
+      "id": 0,
+      "jobTitle": "Junior Programmer",
+      "startDate": "Jan 2023",
+      "endDate": "April 2023",
+      "company": "Jusitice Technology Services (SOLGEN)",
+      "description": [
+        "Provided company users with tech support for IT problems",
+        "Maintained knowledge of advances in information technology systems and applications.",
+        "Tracked and prioritized IT tickets and requests based on severity and potential business disruptions involved.",
+        "Assisted customers with various types of technical issues via email, live chat and telephone.",
+        "Promoted high customer satisfaction by resolving problems with knowledgeable  and friendly service",
+        "Asset Management and Asset Tracking"
+      ]
+    },
+    {
+      "id": 1,
+      "jobTitle": "Laptop and Classroom support Technologist",
+      "startDate": "August 2023",
+      "endDate": "Current",
+      "company": "Sheridan College",
+      "description": [
+        "Provided exceptional customer service, assisting clients courteously and efficiently.",
+        "Exhibited String verbal and written communication skills with a high level of professionalism.",
+        "Effectively conveyed technical information to individuals with diverse backgrounds.",
+        "Demonstrated proficient knowledge of Windows 10 & 11 And MS Office 365.",
+        "Showcased expertise in Audio-Visualequipment, including projectors and microphones.",
+        "Scquired knowledge of current Android and IOS devices, providing comprehensive technical support."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "UI/UX realtor Application",
+      "description": [
+        "As part of a team of four, I created a user-centered prototype for a realtor app for Android/iOS. I designed wireframes and prototypes in Adobe XD, including sign-up, home, and rent/sell pages with animations. I documented user requirements, gaining skills in teamwork, time management, communication, creativity, and problem-solving"
+      ],
+      "link": "https://xd.adobe.com/view/23eb5991-4fb7-4296-bc8f-cff93bb6165b-76b8/",
+      "technologyUsed": "Adobe XD",
+      "others": "This is the remaining details."
+      ,"image": "realtorApplication/preview.png"
+    },
+    {
+      "id": 2,
+      "name": "Sheridan Bagle Cart",
+      "description": [
+        "I developed a GUI application named 'Sheridan Shopping Cart' using JavaFX in NetBeans. Designed in Scene Builder, I implemented functionality for components and buttons, applying OOP principles for extensibility. Key features included price calculation, saving, and printing receipts. Collaborating with the team fostered knowledge sharing and continuous learning."
+      ],
+      "technologyUsed": "Java Fx, Netbeans, Scene Builder",
+      "others": "This is the remaining details."
+      ,"image": "sheridanbagelcart/preview.png"
+    },
+    {
+      "id": 3,
+      "name": "Weather Application",
+      "description": [
+        "I created a responsive weather application using JavaScript, HTML, and CSS, leveraging the OpenWeather API for real-time data. Bootstrap was used to ensure the application adapts seamlessly to different devices, enhancing user experience. This project demonstrated my ability to integrate APIs and design responsive web applications effectively."
+      ],
+      "link": "https:///rajathadd.github.io/WeatherApp/",
+      "technologyUsed": "JavaScriprt, HTML, CSS",
+      "others": "This is the remaining details."
+      ,"image": "weatherapplication/preview.png"
+    },
+    {
+      "id": 4,
+      "name": "Yet To Watch",
+      "description": [
+        "This website developed using ReactJs shows the upcoming movies and tv shows. The user can search for movies and tv shows from previous years."
+      ],
+      "link": "https://sainirajat1407.github.io/the-fav-movies/",
+      "technologyUsed": "ReactJs, TMDB API",
+      "others": "This is the remaining details."
+      ,"image": "yetToWatch/preview.png"
+    }
+  ],
+  "education": [
+    {
+      "id": 0,
+      "type": "Seconday Education",
+      "name": "Parth Public Senior Secondary School",
+      "location": "Haryana, India",
+      "passingYear": "2020",
+      "major": "Science & Mathematics",
+      "gpa": "9.5",
+      "images": ["parthschool.jpeg", "school2.jpg"]
+    },
+    {
+      "id": 1,
+      "type": "Advanced Diploma",
+      "name": "Davis Campus, Sheridan College",
+      "location": "Brampton, Canada",
+      "passingYear": "2024",
+      "major": "Computer Science",
+      "gpa": "3.7",
+      "images": ["sheridancollege.jpg", "sheridan2.jpg"]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  .experience-heading-top{
+    font-size: 4rem;
+    color: black;
+    font-weight: 700;
+  }
+
+  .experience-details-container {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    gap: 40px;
+    margin: auto;
+    font-family: "Libre Baskerville", serif;
+
+    .experience-card {
+      background-color: rgb(70, 70, 70);
+      width: 50vw;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
+      color: white;
+      position: relative;
+      padding: 40px;
+
+      .job-heading {
+        text-align: center;
+        font-size: 2rem;
+      }
+      .job-description {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 15px;
+        overflow: hidden;
+        text-align: center;
+      }
+      .job-time{
+        font-size: 1.2rem;
+      }
+      .job-company {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      .job-popup {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        color: orange;
+        font-size: 35px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+      }
+    }
+    .overlay {
+      position: fixed;
+      top: 0vh;
+      right: 0vw;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.411);
+      backdrop-filter: blur(51px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      z-index: 550;
+      color: white;
+      .job-description {
+        font-size: 20px;
+        width: 70%;
+      }
+      .job-popup {
+        right: 10%;
+        bottom: 15%;
+      }
+    }
+  }
+
+
+}
+
+@media only screen and (max-width: 1009px){
+    .experience-container{
+      .experience-heading-top{
+        font-size: 3rem;
+      }
+    
+      .experience-details-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100vw;
+        .experience-card{
+          width: 45vw;
+          height: 35vh;
+          .job-heading{
+            font-size:20px;
+
+          }
+          .job-time,.job-company{
+            font-size: 13px;
+          }
+          .job-description{
+            font-size: 12px;
+          }
+          
+        }
+        .overlay{
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+        }
+      }
+    }
+}
+
+@media only screen and (max-width: 501px){
+  .experience-container{
+    .experience-heading-top{
+      font-size: 20px;
+
+    }
+  
+    .experience-details-container{
+      height: 100vh;
+      gap: 7px;
+      flex-direction: column;
+      align-items: center;
+      .experience-card{
+        width: 90vw;
+        height: 29vh;
+        .job-heading{
+          font-size:15px;
+
+        }
+        .job-time,.job-company{
+          font-size: 13px;
+        }
+        .job-description{
+          font-size: 12px;
+        }
+        
+      }
+      .overlay{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+  
+      }
+    }
+  }
+}
