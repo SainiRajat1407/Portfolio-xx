@@ -1,17 +1,12 @@
 import React from "react";
 import "./footer.styles.scss";
-import { VscGithub } from "react-icons/vsc";
-import { FaLinkedin } from "react-icons/fa";
-import image1 from "../../asset/images/backgroundimages/footerbackground/1.jpg";
-import image2 from "../../asset/images/backgroundimages/footerbackground/2.jpg";
-import image3 from "../../asset/images/backgroundimages/footerbackground/3.jpg";
-import image4 from "../../asset/images/backgroundimages/footerbackground/4.jpg";
-import image5 from "../../asset/images/backgroundimages/footerbackground/5.jpg";
+import image1 from "../../asset/images/backgroundimages/footerbackground/1.jpeg";
+import image2 from "../../asset/images/backgroundimages/footerbackground/2.jpeg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import ThemeContext from "../../context/theme/themeContext";
 
-const images = [image5,image2, image3, image4, image1];
+const images = [{"src":image2, description:"Meeting Naveen Nigam Head of Developer relations at GDG Mississauga DevFest 2023"}, 
+  {"src":image1, description:"Getting the first prize for the best IT project(Gigjet) at Sheridan College(Dec. 2024)"},];
 
 const Footer = () => {
   const responsive = {
@@ -33,19 +28,9 @@ const Footer = () => {
       items: 1,
     },
   };
-  const themeContext = React.useContext(ThemeContext)
   return (
-    <div className="footer-container" id="Footer"  style={{backgroundColor : themeContext['darkMode'] ? "#2B2A4C" : "white"}} >
-      <div className="footer-contact-links"  style={{color : themeContext['darkMode'] ? "white" : "black"}} >
-        <a className="footer-link" href="https://github.com/SainiRajat1407" target="_blank" rel="noreferrer" style={{color : themeContext['darkMode'] ? "white" : "black"}}>
-          <VscGithub />
-        </a>
-        <a className="footer-link" href="https://www.linkedin.com/in/saini-rajat/" target="_blank" rel="noreferrer" style={{color : themeContext['darkMode'] ? "white" : "black"}}>
-          <FaLinkedin />
-        </a>
-        <div className="contact-email" >rajatsaini94680@gmail.com</div>
-      </div>
-      <div className="footer-image-carousel">
+    <div className="footer-container" id="Footer"   >
+
         <Carousel
           responsive={responsive}
           swipeable={true}
@@ -56,18 +41,18 @@ const Footer = () => {
           autoPlay={true}
         >
           {images.map((image, index) => {
-            return (
+            return (<>
               <img
-                src={image}
+                src={image.src}
                 key={index}
 
                 alt={index}
                 className="footer-carousel-image"
               />
-            );
+              <div className="image-text">{image.description}</div>
+            </>);
           })}
         </Carousel>
-      </div>
     </div>
   );
 };

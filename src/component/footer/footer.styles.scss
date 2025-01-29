@@ -1,71 +1,82 @@
-.footer-container{
-    width: 100vw;
-    height: 70vh;
-    background-color: #2B2A4C;
-    position: relative;
-    color: white;
+.footer-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    height: 70vh;
+    overflow: hidden;
+    margin-bottom: 4rem;
 
+    .react-multi-carousel-list {
+        width: 85%;
+        height: 100%;
+        position: relative;
 
-    .footer-contact-links{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 15vw;
-        .footer-link{
-            font-size: 70px;
-            text-decoration: none;
+        .footer-carousel-image {
+            width :90%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-left: 5%;
+            position: relative;
+
+        }
+        .image-text {
+            position: absolute;
             color: white;
+            left: 6%;
+            top: 65%;
+            text-align: center;
+            font-size: 1.5rem;
+            width: 85%;
         }
     }
-    .footer-image-carousel{
-        width: 460px;
 
-        .footer-carousel-image{
-            width: 450px;
-            height: 600px;
-        }
-    }
+
+
+
 
 }
-@media only screen and (max-width: 929px){
-    .footer-container{
+
+@media only screen and (max-width: 929px) {
+    .footer-container {
         height: 100vh;
         flex-direction: column;
         justify-content: center;
         gap: 20px;
-        .footer-contact-links{
+
+        .footer-contact-links {
             flex-direction: row;
             gap: 10px;
 
-            .footer-link{
+            .footer-link {
                 font-size: 40px;
             }
         }
-        .footer-image-carousel{
+
+        .footer-image-carousel {
             width: 380px;
         }
     }
 }
-@media only screen and (max-width: 400px){
-    .footer-container{
+
+@media only screen and (max-width: 400px) {
+    .footer-container {
         height: 100vh;
         flex-direction: column;
         justify-content: center;
         gap: 20px;
-        .footer-contact-links{
+
+        .footer-contact-links {
             flex-direction: row;
             gap: 10px;
 
-            .footer-link{
+            .footer-link {
                 font-size: 40px;
             }
         }
-        .footer-image-carousel{
+
+        .footer-image-carousel {
             width: 340px;
         }
     }

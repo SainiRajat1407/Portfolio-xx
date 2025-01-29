@@ -55,8 +55,8 @@
 @media only screen and (max-width: 929px) {
   .navigation-container {
     top: 90vh;
-    left: 10vw;
-    width: 80vw;
+    left: 25vw;
+    width: 50vw;
     height: 70px;
     .nav-functions{
       flex-direction: row;
@@ -79,6 +79,8 @@
     .nav-functions{
       flex-direction: row;
       width: 90vw;
+      justify-content: center;
+    
       .theme{
         width: 12vw;
       }

@@ -101,75 +101,80 @@
 
 }
 
-// @media only screen and (max-width: 1098px) {
-//   .project-container {
+@media only screen and (max-width: 1098px) {
+  .project-container {
+
     
-//     .project-heading-top,
-//     .project-heading-bottom {
-//       font-size: 3rem;
-//     }
-//     .project-card {
 
+    .project-container-heading{
+      font-size: 3rem;
+      color: black;
+      font-weight: 700;
+    }
 
-//       .project-name {
-//         font-size: 20px;
-//       }
-//       .project-technology-used {
-//         font-size: 20px;
-//       }
-//       .project-description {
-//         font-size: 14px;
-//       }
-//     }
-//     .overlay {
-//       position: fixed;
-//       height: 100vh;
-//       width: 100vw;
-//       .project-photo{
-//         .first-project{
-//           width:400px;
-//           height: 650px;
-//         }
-//         .second-project{
-//           width:350px;
-//           height: 450px;
-//         }
-//         .third-project{
-//           width: 400px;
-//         }
-//       }
-//     }
-//   }
-// }
+    .project-card {
+      width: 80vw;
+      .project-name {
+        font-size: 20px;
+      }
+      .project-technology-used {
+        font-size: 20px;
+      }
+      .project-description {
+        font-size: 14px;
+      }
+    }
+    .overlay {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      .project-photo{
+        .first-project{
+          width:400px;
+          height: 650px;
+        }
+        .second-project{
+          width:350px;
+          height: 450px;
+        }
+        .third-project{
+          width: 400px;
+        }
+      }
+    }
+  }
+}
 
-// @media only screen and (max-width: 501px) {
-//   .project-container {
-//     display: flex;
-//     flex-direction: column;
-//     .project-heading-top{
-//       font-size: 25px;
-//     }
-//     .project-card {
-//       width: 90vw;
-//       height: 29vh;
-//     }
-//     .overlay {
-//       position: fixed;
-//       height: 100vh;
-//       width: 100vw;
-//       .project-photo {
-//         .first-project{
-//           width:250px;
-//           height: 450px;
-//         }
-//         .second-project{
-//           width:320px;
-//           height: 450px;
-//         }
-//         .third-project{
-//           width: 300px;
-//         }
-//       }
-//     }
-//   }
-// }
+@media only screen and (max-width: 501px) {
+  .project-container {
+    display: flex;
+    flex-direction: column;
+    .project-heading-top{
+      font-size: 25px;
+    }
+    .project-card {
+      width: 80vw;
+    }
+    .overlay {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      .project-photo {
+        .first-project{
+          width:250px;
+          height: 450px;
+        }
+        .second-project{
+          width:320px;
+          height: 450px;
+        }
+        .third-project{
+          width: 300px;
+        }
+        .fourth-project{
+          width: 500px;
+        }
+      }
+    }
+  }
+}

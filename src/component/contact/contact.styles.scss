@@ -1,5 +1,5 @@
 .contact-container {
-  position: fixed;
+
   margin: auto;
   width: 100vw;
   height: 100vh;
@@ -8,25 +8,32 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.473);
-  z-index: 500;
-  backdrop-filter: blur(51px);
+  gap: 2rem;
+
+  .contact-heading{
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .contact-email{
+    font-size: 1.5rem;
+  }
 
   .contact-form-container {
-    z-index: 0;
-    width: 50vw;
+    width: 400px;
     height: 60vh;
-    background-color: rgba(207, 205, 205, 0.808);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
+
     .form {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
       font-size: 25px;
+      gap: 20px;
+      
       .contact-sub-form-container {
         display: flex;
         flex-direction: column;
@@ -50,10 +57,17 @@
         }
       }
       .submit-button{
-        margin-top: 20px;
-        font-size: 26px;
-        color: red;
-        border-radius: 20px;
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        background: #3A506B; /* Gradient */
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       }
     }
   }

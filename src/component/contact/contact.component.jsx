@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import "./contact.styles.scss";
 import emailjs from "@emailjs/browser";
+import { MdOutlineMail } from "react-icons/md";
+
 
 const templateId = "template_k5f6v1h";
 const servieId = "service_vm9df1f";
@@ -47,15 +49,20 @@ const Contact = (props) => {
   return (
     <>
       <div className="contact-container" id="Contact">
+      <div className="contact-heading">
+          Let's get in touch
+        </div>
+        <div className="contact-email">
+          <MdOutlineMail/> Rajatsaini94680@gmail.com
+        </div>  
+    
         <div className="contact-form-container">
           <form
-            action=""
             className="form form1"
             ref={form}
             onSubmit={sendEmail}
           >
             <div className="contact-sub-form-container">
-              <label htmlFor="name">Name</label>
               <input
                 type="text"
                 name="user_name"
@@ -69,7 +76,6 @@ const Contact = (props) => {
               />
             </div>
             <div className="contact-sub-form-container">
-              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 name="user_email"
@@ -81,7 +87,6 @@ const Contact = (props) => {
               />
             </div>
             <div className="contact-sub-form-container">
-              <label htmlFor="message">Message</label>
               <textarea
                 name="message"
                 id="message"
@@ -97,6 +102,9 @@ const Contact = (props) => {
             {isSubmitted && (<div style={{color: "green"}}>Thanks for contacting!</div>)  }
           </form>
         
+        </div>
+        <div className="copyrights">
+          © 2025 Designed by Rajat. All rights reserved.
         </div>
       </div>
     </>

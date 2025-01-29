@@ -53,10 +53,7 @@ const Skills = () => {
   //theme context
   const themeContext = React.useContext(ThemeContext);
 
-  const themeChange = () => {
-    themeContext.setThemeOne(!themeContext.themeOne);
-    themeContext.setThemeTwo(!themeContext.themeTwo);
-  };
+
   return (
     <div
       className="technical-skills-main-container"
@@ -65,25 +62,6 @@ const Skills = () => {
        <div className="icon-technical-container-heading">
           Technical Skills
         </div>
-      {/* <div className="theme-change-button-container">
-      {themeContext.themeOne ? (
-            <div className="theme" onClick={themeChange} style={{color: "orange"}}>
-              <ColorLensIcon />
-              <div className="under-heading">theme 1</div>
-            </div>
-          ) : (
-            ""
-          )}
-          {themeContext.themeTwo ? (
-            <div className="theme" onClick={themeChange} style={{color: "yellow"}}>
-              <BrushIcon />
-              <div className="under-heading">theme 2</div>
-            </div>
-          ) : (
-            ""
-      )}
-      </div> */}
-
 
       <div className="icon-technical-container">
        

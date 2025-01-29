@@ -14,10 +14,10 @@ import bagelHome from "../../asset/images/sheridanbagelcart/home.png";
 import bagelRecipt from "../../asset/images/sheridanbagelcart/recipt.png";
 import weatherCity from "../../asset/images/weatherapplication/city.png";
 import weatherHome from "../../asset/images/weatherapplication/home.png";
+import yetToWatchHome from "../../asset/images/yetToWatch/thefavmovies1.png";
+import yetToWatchSearch from "../../asset/images/yetToWatch/thefacmovies2.png";
 import weatherSearch from "../../asset/images/weatherapplication/mobileview.png";
 import MousePositionContext from "../../context/mouseTracker/mouseContext";
-import ScrollContext from "../../context/scroll/scrollContext";
-import projectImage from '../../asset/images/realtorApplication/preview.png'
 
 const projectImages = {
   realtorApp: [
@@ -31,6 +31,7 @@ const projectImages = {
   ],
   bagelCart: [bagelHome, bagelRecipt],
   weatherApp: [weatherHome, weatherCity, weatherSearch],
+  yetToWatch: [yetToWatchHome, yetToWatchSearch],
 };
 
 const Project = () => {
@@ -44,12 +45,12 @@ const Project = () => {
   const mouseTracker = React.useContext(MousePositionContext);
   const mousePosition = mouseTracker[0];
 
-  const scrollContext = React.useContext(ScrollContext);
 
   const [overlays, setOverlays] = React.useState({
     1: false,
     2: false,
     3: false,
+    4: false,
   });
 
   const handleStateChange = (id) => {
@@ -67,8 +68,6 @@ const Project = () => {
         setImageCounter(imageCounter + 1);
         setCurrentImage(projectImages["realtorApp"][imageCounter]);
       }
-
-      console.log(imageCounter);
     } else if (id === 2) {
       if (imageCounter === projectImages["bagelCart"].length - 1) {
         setCurrentImage(projectImages["bagelCart"][imageCounter]);
@@ -77,7 +76,6 @@ const Project = () => {
         setImageCounter(imageCounter + 1);
         setCurrentImage(projectImages["bagelCart"][imageCounter]);
       }
-      console.log(imageCounter);
     } else if (id === 3) {
       if (imageCounter === projectImages["weatherApp"].length - 1) {
         setCurrentImage(projectImages["weatherApp"][imageCounter]);
@@ -86,7 +84,15 @@ const Project = () => {
         setImageCounter(imageCounter + 1);
         setCurrentImage(projectImages["weatherApp"][imageCounter]);
       }
-      console.log(imageCounter);
+    }
+    else if (id === 4) {
+      if (imageCounter === projectImages["yetToWatch"].length - 1) {
+        setCurrentImage(projectImages["yetToWatch"][imageCounter]);
+        setImageCounter(0);
+      } else {
+        setImageCounter(imageCounter + 1);
+        setCurrentImage(projectImages["yetToWatch"][imageCounter]);
+      }
     }
   };
 
@@ -100,18 +106,18 @@ const Project = () => {
         return (
           <div
             className={`project-card ${overlays[item.id + 1] ? "overlay" : ""}`}
-            
+
             key={item.id}
             {...(currentProject === item.id
               ? { onClick: () => handleImagesDisplayOnOverlay(item.id) }
               : null)}
-            
+
           >
-            
+
 
             <div className="project-name">{item.name}</div>
-            {isOverlayed&& (<img src={require(`../../asset/images/${item.image}`)} alt="" style={{width:"95%"}}/>)}
-            
+            {isOverlayed && (<img src={require(`../../asset/images/${item.image}`)}  style={{ width: "95%" }} />)}
+
 
             {isOverlayed && (
               <GoRepoPush
@@ -155,8 +161,8 @@ const Project = () => {
                     item.id === 1
                       ? "first-project"
                       : item.id === 2
-                      ? "second-project"
-                      : "third-project"
+                        ? "second-project"
+                        : item.id === 3 ? "third-project" : "fourth-project"
                   }
                 />{" "}
               </div>
