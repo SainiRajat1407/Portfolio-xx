@@ -45,7 +45,6 @@ const Footer = () => {
               <img
                 src={image.src}
                 key={index}
-
                 alt={index}
                 className="footer-carousel-image"
               />

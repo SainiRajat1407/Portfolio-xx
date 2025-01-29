@@ -6,7 +6,7 @@
   width: 100vw;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 3rem;
   position: relative;
 
 
@@ -69,10 +69,10 @@
     color: white;
     border-radius: 0;
     .project-popup-btn {
-      font-size: 75px;
+      font-size: 35px;
       z-index: 500;
       top: 5%;
-      right: 5%;
+      right: 15%;
 
     }
     .project-description {
@@ -172,7 +172,7 @@
           width: 300px;
         }
         .fourth-project{
-          width: 500px;
+          width: 400px;
         }
       }
     }

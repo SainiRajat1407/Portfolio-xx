@@ -32,10 +32,6 @@
         }
     }
 
-
-
-
-
 }
 
 @media only screen and (max-width: 929px) {
@@ -45,17 +41,27 @@
         justify-content: center;
         gap: 20px;
 
-        .footer-contact-links {
-            flex-direction: row;
-            gap: 10px;
-
-            .footer-link {
-                font-size: 40px;
+    
+        .react-multi-carousel-list {
+    
+            .footer-carousel-image {
+                width :90%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+                margin-left: 5%;
+                position: relative;
+    
             }
-        }
-
-        .footer-image-carousel {
-            width: 380px;
+            .image-text {
+                position: absolute;
+                color: white;
+                left: 6%;
+                top: 75%;
+                text-align: center;
+                font-size: 1rem;
+                width: 85%;
+            }
         }
     }
 }

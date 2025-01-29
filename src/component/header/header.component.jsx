@@ -40,7 +40,7 @@ const Header = () => {
     <>
       <div className="navigation-container">
         <div className="nav-functions">
-          {theme.lightMode ? (
+          {/* {theme.lightMode ? (
             <div className="theme" onClick={modeChange} style={{ color: "yellow" }}>
               <LightModeIcon />
               <div className="under-heading">Light</div>
@@ -55,7 +55,7 @@ const Header = () => {
             </div>
           ) : (
             ""
-          )}
+          )} */}
 
           <div
             className="menu-item"

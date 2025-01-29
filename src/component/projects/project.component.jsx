@@ -18,6 +18,7 @@ import yetToWatchHome from "../../asset/images/yetToWatch/thefavmovies1.png";
 import yetToWatchSearch from "../../asset/images/yetToWatch/thefacmovies2.png";
 import weatherSearch from "../../asset/images/weatherapplication/mobileview.png";
 import MousePositionContext from "../../context/mouseTracker/mouseContext";
+import {motion} from 'framer-motion'
 
 const projectImages = {
   realtorApp: [
@@ -99,12 +100,16 @@ const Project = () => {
   return (
     <div className="project-container" >
 
-      <div className="project-container-heading">
+      <motion.div className="project-container-heading"
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}>
         Projects
-      </div>
+      </motion.div>
       {data.projects.map((item) => {
         return (
-          <div
+          <motion.div
+          initial={{ y: 80 }}
+          whileInView={{  y: 0 }} transition={{ duration: 0.2, ease: "easeOut" }}
             className={`project-card ${overlays[item.id + 1] ? "overlay" : ""}`}
 
             key={item.id}
@@ -116,7 +121,7 @@ const Project = () => {
 
 
             <div className="project-name">{item.name}</div>
-            {isOverlayed && (<img src={require(`../../asset/images/${item.image}`)}  style={{ width: "95%" }} />)}
+            {isOverlayed && (<img src={require(`../../asset/images/${item.image}`)} style={{ width: "75%" }} />)}
 
 
             {isOverlayed && (
@@ -174,7 +179,7 @@ const Project = () => {
                 return <div key={item}>{item}</div>;
               })}
             </div>
-          </div>
+          </motion.div>
         );
       })}
 
